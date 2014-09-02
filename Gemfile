@@ -1,15 +1,12 @@
-source 'https://rubygems.org'
-
-ruby '1.9.3'
-
-gem 'tzinfo-data'
+source 'https://rubygems.org/'
+#source 'http://ruby.taobao.org/'
 
 gem 'rails', '4.1.1'
-gem 'railties', '4.1.1'
 gem 'jquery-rails', '3.0.4'
+gem 'turbolinks'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.5'
+  gem 'sqlite3', '1.3.9'
   gem 'rspec-rails','2.10.0'
 end
 
@@ -22,8 +19,8 @@ group :assets do
 end
 
 group :test do
-  gem 'capybara', '1.1.2'
-  gem 'rspec'
+	gem 'minitest'
+  	gem 'capybara', '1.1.2'
 end
 
 group :production do
