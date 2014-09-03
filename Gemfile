@@ -4,6 +4,8 @@ source 'https://rubygems.org/'
 gem 'rails', '4.1.1'
 gem 'jquery-rails', '3.0.4'
 gem 'turbolinks'
+gem 'pg', '0.15.1'
+gem 'guard-rspec', '0.5.5'
 
 group :development, :test do
   gem 'sqlite3', '1.3.9'
@@ -21,8 +23,11 @@ end
 group :test do
 	gem 'minitest'
   	gem 'capybara', '1.1.2'
+  	gem 'rb-inotify'
+	gem 'libnotify'
+	gem 'guard-spork', '0.3.2'
+	gem 'spork', '0.9.0'
 end
 
 group :production do
-  gem 'pg', '0.12.2'
 end
