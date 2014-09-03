@@ -6,6 +6,7 @@ gem 'jquery-rails', '3.0.4'
 gem 'turbolinks'
 gem 'pg', '0.15.1'
 gem 'guard-rspec', '0.5.5'
+gem 'bootstrap-sass', '2.0.0'
 
 group :development, :test do
   gem 'sqlite3', '1.3.9'
@@ -15,15 +16,16 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '4.0.1'
+  gem 'sass-rails', '~> 4.0.3'
   gem 'coffee-rails', '4.0.1'
   gem 'uglifier', '1.2.3'
+  gem 'sprockets', '2.11.0'
 end
 
 group :test do
 	gem 'minitest'
-  	gem 'capybara', '1.1.2'
-  	gem 'rb-inotify'
+  gem 'capybara', '1.1.2'
+  gem 'rb-inotify'
 	gem 'libnotify'
 	gem 'guard-spork', '0.3.2'
 	gem 'spork', '0.9.0'
