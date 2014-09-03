@@ -1,12 +1,13 @@
 source 'https://rubygems.org/'
 #source 'http://ruby.taobao.org/'
-
+ruby '2.1.2'
 gem 'rails', '4.1.1'
 gem 'jquery-rails', '3.0.4'
 gem 'turbolinks'
 gem 'pg', '0.15.1'
 gem 'guard-rspec', '0.5.5'
 gem 'bootstrap-sass', '2.0.0'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'sqlite3', '1.3.9'
@@ -32,4 +33,5 @@ group :test do
 end
 
 group :production do
+
 end
