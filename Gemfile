@@ -6,8 +6,11 @@ gem 'jquery-rails', '3.0.4'
 gem 'turbolinks'
 gem 'pg', '0.15.1'
 gem 'guard-rspec', '0.5.5'
-gem 'bootstrap-sass', '2.0.0'
+gem 'bootstrap-sass', '2.0.0' 
+gem 'bcrypt', '~>3.1.5'
+#For heroku assets pipeline
 gem 'rails_12factor'
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.9'
