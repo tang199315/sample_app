@@ -9,8 +9,7 @@
 #  updated_at      :datetime
 #  password_digest :string(255)
 #
-
-require 'spec_helper'
+require 'rails_helper'
 
 describe User do
 	before(:each){ @user = User.new(name: 'user', email: 'user@example.com',
@@ -23,7 +22,7 @@ describe User do
 	it { should respond_to(:password) }
 	it { should respond_to(:password_confirmation) }
 	it { should respond_to(:authenticate)}
-	#it { should be_valid}
+	it { should be_valid}
 
 #name
 	describe "when name is no present" do
@@ -113,7 +112,7 @@ describe User do
 			let(:user_with_invalid_password) { found_user.authenticate("invalid") }
 
 			it { should_not == user_with_invalid_password}
-			specify { user_with_invalid_password.should be_false }
+			it { user_with_invalid_password.should ==  false }
 		end
 	end
 

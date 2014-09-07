@@ -1,4 +1,5 @@
-require 'spec_helper'
+require 'rails_helper'
+include ApplicationHelper
 
 describe "User Pages" do
 	subject { page }
@@ -9,5 +10,11 @@ describe "User Pages" do
 		it { should have_selector('title', :text => full_title('Sign up'))  }
 	end
 
-end
+	describe "Profile page" do
+		before(:each){ @user = FactoryGirl.create(:user) }
+		before { visit user_path(@user) }
 
+		it { should have_selector('h1', text: @user.name) }
+		it { should have_selector('title', text: @user.name)}
+	end
+end

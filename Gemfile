@@ -13,8 +13,7 @@ gem 'rails_12factor'
 
 
 group :development, :test do
-  gem 'sqlite3', '1.3.9'
-  gem 'rspec-rails','2.10.0'
+  gem 'rspec-rails', '~> 3.1.0'
 end
 
 gem 'annotate', '2.5.0', group: :development
@@ -29,11 +28,12 @@ end
 
 group :test do
 	gem 'minitest'
-  gem 'capybara', '1.1.2'
+  gem 'capybara', '~> 2.4.1'
   gem 'rb-inotify'
 	gem 'libnotify'
 	gem 'guard-spork', '0.3.2'
 	gem 'spork', '0.9.0'
+  gem 'factory_girl_rails', '~> 4.4.1'
 end
 
 group :production do
