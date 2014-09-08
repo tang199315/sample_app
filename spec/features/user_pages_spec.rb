@@ -28,6 +28,15 @@ describe "User Pages" do
 			it "should not create a new user" do
 				expect{ click_button submit}.not_to change(User, :count) 
 			end
+
+			describe "after submission" do
+				before { click_button submit }
+				it "should have error messages" do
+					has_css?('title', 'Sign up')
+					have_context?('error')
+				end
+			end
+
 		end
 
 		describe "with valid info" do
@@ -42,8 +51,9 @@ describe "User Pages" do
 			end
 
 			it "should redirect to profile page" do
+				has_css?('title', text: 'Testing')
 				has_css?('h1', text: 'Testing')
-				has_css?('h1', text: 'Testing')
+				have_context?('welcome')
 			end
 
 		end
