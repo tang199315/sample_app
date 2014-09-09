@@ -9,21 +9,22 @@ gem 'guard-rspec', '0.5.5'
 gem 'bcrypt', '~>3.1.5'
 #For heroku assets pipeline
 gem 'rails_12factor'
+gem 'bootstrap-sass', '~> 3.2.0'
 
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
 end
 
-gem 'annotate', '2.5.0', group: :development
+  gem 'annotate', '2.5.0', group: :development
 # Gems used only for assets and not required
 # in production environments by default.
-  gem 'bootstrap-sass', '~> 3.2.0'
+group :assets do
   gem 'sass-rails', '~> 4.0.3'
   gem 'coffee-rails', '4.0.1'
   gem 'uglifier', '1.2.3'
   gem 'sprockets', '2.11.0'
-
+end
 
 group :test do
 	gem 'minitest'
