@@ -6,7 +6,6 @@ gem 'jquery-rails', '3.0.4'
 gem 'turbolinks'
 gem 'pg', '0.15.1'
 gem 'guard-rspec', '0.5.5'
-gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'bcrypt', '~>3.1.5'
 #For heroku assets pipeline
 gem 'rails_12factor'
@@ -19,12 +18,12 @@ end
 gem 'annotate', '2.5.0', group: :development
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
+  gem 'bootstrap-sass', '~> 3.2.0'
   gem 'sass-rails', '~> 4.0.3'
   gem 'coffee-rails', '4.0.1'
   gem 'uglifier', '1.2.3'
   gem 'sprockets', '2.11.0'
-end
+
 
 group :test do
 	gem 'minitest'
