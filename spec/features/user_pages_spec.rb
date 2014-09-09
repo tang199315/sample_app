@@ -51,9 +51,11 @@ describe "User Pages" do
 			end
 
 			it "should redirect to profile page" do
+				click_button submit
 				has_css?('title', text: 'Testing')
 				has_css?('h1', text: 'Testing')
 				have_context?('welcome')
+				should have_link('Sign out' ,href: signout_path)
 			end
 
 		end
