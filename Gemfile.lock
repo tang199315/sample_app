@@ -32,7 +32,8 @@ GEM
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     bcrypt (3.1.7-x86-mingw32)
-    bootstrap-sass (2.0.0)
+    bootstrap-sass (2.3.0.1)
+      sass (~> 3.2)
     builder (3.2.2)
     capybara (2.4.1)
       mime-types (>= 1.16)
@@ -198,7 +199,7 @@ PLATFORMS
 DEPENDENCIES
   annotate (= 2.5.0)
   bcrypt (~> 3.1.5)
-  bootstrap-sass (= 2.0.0)
+  bootstrap-sass (~> 2.3.0.1)
   capybara (~> 2.4.1)
   coffee-rails (= 4.0.1)
   factory_girl_rails (~> 4.4.1)
