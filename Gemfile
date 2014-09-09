@@ -9,7 +9,7 @@ gem 'guard-rspec', '0.5.5'
 gem 'bcrypt', '~>3.1.5'
 #For heroku assets pipeline
 gem 'rails_12factor'
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '2.0.0'
 
 
 group :development, :test do
