@@ -7,12 +7,12 @@ describe "AuthenticationPages" do
   	describe "signin page" do
   		before(:each) { visit signin_path }
 
-		it { has_css?('h1', text: 'Sign in') }
-		it { has_css?('title', text: full_title('Sign in')) }
+		it { should have_selector('h1', text: 'Sign in') }
+		it { should have_title( full_title('Sign in') ) }
 
 		describe "with invalid info" do
 			before { click_button "Sign in" }
-			it { has_css?('div.alert.alert-error', text: 'invalid') }
+			it { should have_selector('div.alert.alert-error', text: 'Invalid') }
 		end
 
 		describe "with valid info" do
@@ -23,7 +23,7 @@ describe "AuthenticationPages" do
 				click_button "Sign in"
 			end
 
-			 it { has_css?('title', text: user.name) }
+			 it { should have_title(user.name) }
 			 it { should have_link('Profile', href: user_path(user)) }
 			 it { should have_link('Sign out', href: signout_path) }
 			 it { should_not have_link('Sign in', href: signin_path) }
