@@ -7,16 +7,16 @@ describe "User Pages" do
 	describe "Sign Up Page" do
 		before(:each){ visit signup_path}
 
-		it { has_css?('h1', text: 'Sign up') }
-		it { has_css?('title', text: full_title('Sign up')) }
+		it { should have_selector('h1', text: 'Sign up') }
+		it { should have_title(full_title('Sign up')) }
 	end
 
 	describe "Profile page" do
 		let(:user){ FactoryGirl.create(:user) }
 		before { visit user_path(user) }
 		
-		it { has_css?('title', text: user.name) }
-		it { has_css?('h1', text: user.name) }
+		it { should have_title(user.name) }
+		it { should have_selector('h1', text: user.name) }
 	end
 
 #Data Validation
@@ -32,8 +32,8 @@ describe "User Pages" do
 			describe "after submission" do
 				before { click_button submit }
 				it "should have error messages" do
-					has_css?('title', 'Sign up')
-					have_context?('error')
+					should have_title('Sign up')
+					should have_content('error')
 				end
 			end
 
@@ -52,9 +52,9 @@ describe "User Pages" do
 
 			it "should redirect to profile page" do
 				click_button submit
-				has_css?('title', text: 'Testing')
-				has_css?('h1', text: 'Testing')
-				have_context?('welcome')
+				should have_title('Testing')
+				should have_selector('h1', text: 'Testing')
+				should have_content('Welcome')
 				should have_link('Sign out' ,href: signout_path)
 			end
 
